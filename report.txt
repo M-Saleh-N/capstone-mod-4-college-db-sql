@@ -1,0 +1,48 @@
+Capstone Project 2: College Database Design and Queries
+--------------------------------------------------------
+
+👨‍🎓 Schema Design Overview
+----------------------------
+This project implements a normalized relational database for a fictional college. The schema is designed to follow 3NF (Third Normal Form) to eliminate redundancy and ensure data integrity.
+
+Tables Created:
+1. students     - stores basic student information
+2. instructors  - stores instructor details and links to departments
+3. departments  - stores academic department names
+4. courses      - each course is taught by an instructor and belongs to a department
+5. enrollments  - many-to-many relationship between students and courses, with optional grade
+
+Normalization Highlights:
+- Each table has a single theme and a primary key
+- No repeating groups or derived data
+- Foreign keys enforce relationships between tables
+- All non-key attributes depend only on the primary key
+
+🧠 Query Summary
+----------------------------
+10 queries were created to demonstrate understanding of SQL concepts like:
+
+1. INNER JOIN to list students and their courses
+2. LEFT JOIN and GROUP BY to count enrollments per course
+3. CASE + AVG for grade point calculation
+4. Subquery to find students not enrolled in any course
+5. EXISTS and IN for filtering
+6. Aggregation for top performers
+7. Filtering by department
+8. HAVING clause for course popularity
+9. JOINs to get department-course relationships
+10. Identifying unused courses via NULL LEFT JOINs
+
+Example Result:
+- Query #3 shows the average grade (as GPA points) for each course.
+- Query #8 ranks students by how many courses they are taking.
+
+🧾 Deliverables Implemented
+----------------------------
+✔️ schema.sql - all CREATE TABLE statements  
+✔️ data.sql - 10+ entries per table  
+✔️ queries.sql - 10 fully working and commented SQL queries  
+✔️ report.txt - explanation of schema and query insights  
+✔️ README.md - instructions to run and understand the project
+
+✅ The database is self-contained and ready for testing or extension.
